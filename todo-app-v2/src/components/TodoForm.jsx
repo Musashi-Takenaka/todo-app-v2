@@ -15,6 +15,7 @@ export default function TodoForm({ onAdd }) {
     });
 
     setText("");
+    setDueDate("");
   }
 
   return (
@@ -35,9 +36,9 @@ export default function TodoForm({ onAdd }) {
         value={priority}
         onChange={(e) => setPriority(e.target.value)}
       >
-        <option value="high">優先度　高</option>
-        <option value="medium">優先度　中</option>
-        <option value="low">優先度　低</option>
+        <option value="high">優先度 高</option>
+        <option value="medium">優先度 中</option>
+        <option value="low">優先度 低</option>
       </select>
 
       <input
@@ -46,7 +47,9 @@ export default function TodoForm({ onAdd }) {
         onChange={(e) => setDueDate(e.target.value)}
       />
 
-      <button type="submit">追加</button>
+      <button type="submit" className="btn btn-primary">
+        追加
+      </button>
     </form>
   );
 }
