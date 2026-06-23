@@ -1,0 +1,172 @@
+/* =========================
+   ベース（テーマ）
+========================= */
+:root {
+  --text: #333;
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --border: #ddd;
+
+  --high: #ff6b6b;
+  --medium: #f7c948;
+  --low: #51cf66;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   レイアウト
+========================= */
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+/* =========================
+   タイトル
+========================= */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   ボタンフォーム
+========================= */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 12px;
+  flex: 0 0 auto;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   Todoリスト
+========================= */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background: var(--card);
+  margin: 10px 0;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+/* =========================
+   優先度バッジ
+========================= */
+.priority-high {
+  border-left: 4px solid #ff4d4f;
+  background: rgba(255, 77, 79, 0.05);
+}
+
+.priority-medium {
+  border-left: 4px solid #faad14;
+  background: rgba(250, 173, 20, 0.05);
+}
+
+.priority-low {
+  border-left: 4px solid #52c41a;
+  background: rgba(82, 196, 26, 0.05);
+}
+
+/* =========================
+   テキスト調整
+========================= */
+small {
+  color: #666;
+}
+
+.todo-text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.todo-meta {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* =========================
+   Todoフォーム
+========================= */
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-form input {
+  flex: 3;
+  min-width: 250px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.todo-form select {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.todo-form button {
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =========================
+   完了状態
+========================= */
+.done .todo-text {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* =========================
+   ホバーエフェクト
+========================= */
+.todo-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+  transition: 0.2s;
+}
+
+/* =========================
+   余白統一
+========================= */
+.todo-item {
+  margin: 10px 0;
+}
