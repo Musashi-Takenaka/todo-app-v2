@@ -1,7 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$rootDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$appDir = Join-Path $rootDir "todo-app-v2"
+$appDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $url = "http://127.0.0.1:5173/"
 
 Set-Location $appDir

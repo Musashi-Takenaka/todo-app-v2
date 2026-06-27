@@ -23,16 +23,11 @@ React + Vite で作成した TODO アプリです。
 
 ## 起動方法
 
-`todo-app-v2` フォルダ直下にある `start-todo-app.cmd` をダブルクリックすると起動できます。
-
-```text
-C:\Users\takec\Documents\todo-app-v2\start-todo-app.cmd
-```
+`start-todo-app.cmd` をダブルクリックすると起動できます。
 
 コマンドラインから起動する場合:
 
 ```powershell
-cd C:\Users\takec\Documents\todo-app-v2\todo-app-v2
 npm run dev
 ```
 
@@ -64,25 +59,24 @@ npm run build
 
 ```text
 todo-app-v2/
+├─ index.html
+├─ package.json
 ├─ start-todo-app.cmd
 ├─ start-todo-app.ps1
-└─ todo-app-v2/
-   ├─ index.html
-   ├─ package.json
-   ├─ vite.config.js
-   ├─ public/
-   └─ src/
-      ├─ App.jsx
-      ├─ App.css
-      ├─ index.css
-      ├─ main.jsx
-      ├─ components/
-      │  ├─ TodoForm.jsx
-      │  ├─ TodoItem.jsx
-      │  └─ TodoList.jsx
-      └─ utils/
-         ├─ filterTodos.js
-         ├─ sortTodos.js
-         └─ storage/
-            └─ todoStorage.js
+├─ vite.config.js
+├─ public/
+└─ src/
+   ├─ App.jsx
+   ├─ App.css
+   ├─ index.css
+   ├─ main.jsx
+   ├─ components/
+   │  ├─ TodoForm.jsx
+   │  ├─ TodoItem.jsx
+   │  └─ TodoList.jsx
+   └─ utils/
+      ├─ filterTodos.js
+      ├─ sortTodos.js
+      └─ storage/
+         └─ todoStorage.js
 ```
