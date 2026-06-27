@@ -1,16 +1,88 @@
-# React + Vite
+# todo-app-v2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite で作成した TODO アプリです。
 
-Currently, two official plugins are available:
+## 機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- TODO の追加
+- TODO の編集
+- TODO の削除
+- ステータス切り替え
+  - 未着手
+  - 作業中
+  - 完了
+- 優先度の設定
+  - 高
+  - 中
+  - 低
+- 期限日の設定
+- ステータスによる絞り込み
+- タスク名による検索
+- 作成順・優先度・期限日による並び替え
+- localStorage への自動保存
 
-## React Compiler
+## 起動方法
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`todo-app-v2` フォルダ直下にある `start-todo-app.cmd` をダブルクリックすると起動できます。
 
-## Expanding the ESLint configuration
+```text
+C:\Users\takec\Documents\todo-app-v2\start-todo-app.cmd
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+コマンドラインから起動する場合:
+
+```powershell
+cd C:\Users\takec\Documents\todo-app-v2\todo-app-v2
+npm run dev
+```
+
+ブラウザで次の URL を開きます。
+
+```text
+http://127.0.0.1:5173/
+```
+
+## セットアップ
+
+初回のみ依存関係をインストールします。
+
+```powershell
+npm install
+```
+
+`start-todo-app.cmd` から起動する場合は、`node_modules` がなければ自動で `npm install` を実行します。
+
+## ビルド
+
+```powershell
+npm run build
+```
+
+ビルド結果は `dist` に出力されます。
+
+## 構成
+
+```text
+todo-app-v2/
+├─ start-todo-app.cmd
+├─ start-todo-app.ps1
+└─ todo-app-v2/
+   ├─ index.html
+   ├─ package.json
+   ├─ vite.config.js
+   ├─ public/
+   └─ src/
+      ├─ App.jsx
+      ├─ App.css
+      ├─ index.css
+      ├─ main.jsx
+      ├─ components/
+      │  ├─ TodoForm.jsx
+      │  ├─ TodoItem.jsx
+      │  └─ TodoList.jsx
+      └─ utils/
+         ├─ filterTodos.js
+         ├─ sortTodos.js
+         └─ storage/
+            └─ todoStorage.js
+```
